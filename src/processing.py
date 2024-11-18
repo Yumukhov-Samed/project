@@ -22,3 +22,4 @@ def sort_by_date(dictioanaris: Iterable[list[dict[Any, Any]]], reverse: bool = T
     list_for_date = sorted(dictioanaris, key=lambda x: x['date'], reverse=reverse)
 
     return list_for_date
+
