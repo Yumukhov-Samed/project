@@ -28,3 +28,16 @@ def test_mask_account_card_valueerror(value, expected):
 def test_get_date(value, expected):
     assert get_date(value) == expected
 
+@pytest.mark.parametrize("value, expected", [("2024.03.11T02:26:18.671407", "11.03.2024"),
+                                             ("2024.08.06", "06.08.2024")])
+def test_get_date(value, expected):
+    assert get_date(value) == expected
+
+@pytest.mark.parametrize("value, expected", [(" ", "Некорректная дата!"),
+                                             (" ", "Некорректная дата!")])
+def test_get_date(value, expected):
+    assert get_date(value) != expected
+
+
+
+

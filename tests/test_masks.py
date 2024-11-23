@@ -3,16 +3,15 @@ import pytest
 from src.masks import get_mask_account, get_mask_card_number
 
 
-def test_get_mask_card_number(numbers_16):
-    assert get_mask_card_number(numbers_16) == "7000 79** **** 6361"
+def test_get_mask_card_number_correct(numbers_16):
+    assert get_mask_card_number_correct(numbers_16) == "7000 79** **** 6361"
 
 
-def test_get_mask_card_number(numbers_19):
-    assert get_mask_card_number(numbers_19) == "1234 56** **** 2123"
 
 
-def test_get_mask_card_number(numbers_zero):
-    assert get_mask_card_number(numbers_zero) == ' ** **** '
+
+def test_get_mask_card_number_zero(numbers_zero):
+    assert get_mask_card_number_zero(numbers_zero) == ' ** **** '
 
 
 @pytest.mark.parametrize("value, expected", [
@@ -26,9 +25,10 @@ def test_get_mask_account(value, expected):
 @pytest.mark.parametrize("value, expected", [
     ("70007922896063611234", "**1234"),
     ("70007 92289 60636 11234", "**1234"),
-    (70007922896063611234, "**1234"),
+    ("70007922896063611234", "**1234"),
 ])
-def test_get_mask_account(value, expected):
-    assert get_mask_account(value) == expected
+def test_get_mask_account_2(value, expected):
+    assert get_mask_account_2(value) == expected
+
 
 

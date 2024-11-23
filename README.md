@@ -79,3 +79,8 @@ poetry install
 {'id': 939719570, 'state': 'EXECUTED', 'date': '2018-06-30T02:08:58.425572'}
 ]
 ```
+
+#*Тестирование*
+
+##Тестирование с помощью библиотеки ***Pytest, Pytest.fixture, Pytest.mark.parametrize***
+
