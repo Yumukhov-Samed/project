@@ -4,14 +4,14 @@ from typing import Iterable, Any
 from src.processing import sort_by_date
 
 
-def test_filter_by_state(test_dict_list_correct_date):
-    assert filter_by_state(test_dict_list_correct_date) == [
+def test_filter_by_state(dict_list_correct_date):
+    assert filter_by_state(dict_list_correct_date) == [
         {'id': 41428829, 'state': 'EXECUTED', 'date': '2019-07-03'},
         {'id': 939719570, 'state': 'EXECUTED', 'date': '30.06.2018'}]
 
 
-def test_filter_by_state(test_dict_list_not_correct_date):
-    assert filter_by_state(test_dict_list_not_correct_date) == [
+def test_filter_by_state_2(dict_list_not_correct_date):
+    assert filter_by_state(dict_list_not_correct_date) == [
         {'id': 41428829, 'state': 'EXECUTED', 'date': 'asfsadasda'},
         {'id': 939719570, 'state': 'EXECUTED', 'date': '********'}]
 
