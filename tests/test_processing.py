@@ -1,7 +1,8 @@
+from typing import Any, Iterable
+
 import pytest
+
 from src.processing import filter_by_state, sort_by_date
-from typing import Iterable, Any
-from src.processing import sort_by_date
 
 
 def test_filter_by_state(dict_list_correct_date):
