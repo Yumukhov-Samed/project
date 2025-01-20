@@ -49,3 +49,8 @@ def test_dict_list():
 def get_date_valueerror():
     return [{" ", "Некорректная дата!"},
             {" ", "Некорректная дата!"}]
+
+
+@pytest.fixture
+def card_numbers():
+    return range(1, 9999999999999999)
