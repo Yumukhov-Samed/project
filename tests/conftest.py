@@ -54,3 +54,14 @@ def get_date_valueerror():
 @pytest.fixture
 def card_numbers():
     return range(1, 9999999999999999)
+
+
+
+@pytest.fixture
+def transaction_list():
+    return [
+        {"id": 1, "description": "Перевод организации"},
+        {"id": 2, "description": "Перевод со счета на счет"},
+        {"id": 3, "description": "Перевод со счета на счет"},
+        {"id": 4, "description": "Перевод с карты на карту"}
+    ]
