@@ -1,6 +1,8 @@
 import time
 from typing import Callable, Any, Optional
 
+"""Декоратор,который  считает время на работу функции и выводит данные в терминал"""
+
 def log(filename: Optional[str] = None) -> Callable[[Callable[..., Any]], Callable[..., Any]]:
     def decorator(func: Callable[..., Any]) -> Callable[..., Any]:
         def wrapper(*args: Any, **kwargs: Any) -> Any:
